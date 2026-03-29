@@ -1,0 +1,15 @@
+The loop will execute as follows, taking a total of 9 cycles:
+| Clock Cycle | Instruction        | Action                   |
+|-------------|--------------------|--------------------------|
+| 1           | L.D F0, 0(R1)      | Issue instruction        |
+| 2           | NOP                | Stall for hazard        |
+| 3           | ADD.D F4, F0, F2   | Issue instruction        |
+| 4           | NOP                | Stall for hazard        |
+| 5           | NOP                | Stall for hazard        |
+| 6           | S.D F4, 0(R1)      | Issue instruction        |
+| 7           | DADDUI R1, R1, #-8 | Issue instruction        |
+| 8           | NOP                | Stall for hazard        |
+| 9           | BNE R1, R2, Loop   | Issue instruction        |
+| 10          |                    | Issue instruction        |
+
+Total Clock Cycles: 10 cycles

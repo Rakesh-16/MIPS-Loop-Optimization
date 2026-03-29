@@ -1,0 +1,20 @@
+L.D F0, 0(R1)
+ADD.D F1, F0, F2
+S.D F1, 0(R1)
+L.D F2, -8(R1)
+ADD.D F3, F2, F2
+S.D F3, -8(R1)
+L.D F4, -16(R1)
+ADD.D F5, F4, F2
+S.D F5, -16(R1)
+L.D F6, -24(R1)
+ADD.D F7, F6, F2
+S.D F7, -24(R1)
+L.D F8, -32(R1)
+ADD.D F9, F8, F2
+S.D F9, -32(R1)
+L.D F10, -40(R1)
+ADD.D F11, F10, F2
+S.D F11, -40(R1)
+DADDUI R1, R1, #-48
+BNE R1, R2, Loop
